@@ -52,7 +52,7 @@ public class Header extends JPanel{
             //Button Listener
             b.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
-                    SystemInit.window.dispose();
+                    System.exit(0);;
                 }
             });
     }

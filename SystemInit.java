@@ -1,5 +1,3 @@
-package init;
-
 import assets.content.UIclasses.myWindow;
 
 public class SystemInit {
