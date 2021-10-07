@@ -50,7 +50,7 @@ public class Menu extends JPanel{
             b.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     if(b.getName().equals("Caixa")){
-                        System.out.println("Você mamou caixa");
+                        
                         if (LCreated){
                             home.deleteLan();
                             LCreated = false;
@@ -61,7 +61,7 @@ public class Menu extends JPanel{
                             
                         }
                     } else if(b.getName().equals("Lan")){
-                        System.out.println("Você mamou lan");
+                        
                         if (CCreated){
                             home.deleteCaixa();
                             CCreated = false;
@@ -74,7 +74,7 @@ public class Menu extends JPanel{
                         
 
                     } else if(b.getName().equals("Ponto")){
-                        System.out.println("Você mamou ponto");
+                        
                     }
                     
                 }
