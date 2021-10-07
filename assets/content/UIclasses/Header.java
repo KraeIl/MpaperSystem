@@ -1,8 +1,6 @@
 package assets.content.UIclasses;
 
-import init.*;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -53,6 +51,17 @@ public class Header extends JPanel{
             b.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     System.exit(0);;
+                }
+            });
+            b.addMouseListener(new java.awt.event.MouseAdapter(){
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    b.setBackground(new Color(124, 153, 230));
+                    b.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 2, new Color(216, 223, 242)));
+                }
+            
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    b.setBackground(new Color(65,120,203));
+                    b.setBorder(null);
                 }
             });
     }

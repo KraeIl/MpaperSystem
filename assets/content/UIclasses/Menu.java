@@ -79,14 +79,12 @@ public class Menu extends JPanel{
                 }
             });
             b.addMouseListener(new java.awt.event.MouseAdapter(){
-                public void mouseEntered(java.awt.event.MouseEvent evt) {
-                    b.setBackground(new Color(39, 55, 78));
-                    b.paintSideBar();
+                public void mouseEntered(java.awt.event.MouseEvent evt) { 
+                    b.paintHover();
                 }
             
                 public void mouseExited(java.awt.event.MouseEvent evt) {
-                    b.setBackground(new Color(22, 33, 53));
-                    b.deleteSideBar();
+                    b.deleteHover();
                 }
             });
         }
