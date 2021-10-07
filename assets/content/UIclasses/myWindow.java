@@ -10,7 +10,7 @@ public class myWindow extends JFrame{
         setUndecorated(true);
 
         //JFrame configurations
-        setSize(1360, 768);
+        setSize(800, 600);
         setResizable(false);
         setFocusable(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

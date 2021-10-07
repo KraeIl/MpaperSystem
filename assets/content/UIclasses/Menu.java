@@ -4,11 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 public class Menu extends JPanel{
     public int x, y, width, height;
     public boolean CCreated = false;
     public boolean LCreated = false;
+    
 
     public Menu(Homepage home){    
         
@@ -44,47 +47,50 @@ public class Menu extends JPanel{
 
             //Adding b
             add(b);
-            
+
             //Setting actionListener
             b.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
                     if(b.getName().equals("Caixa")){
-                        
+                    
                         if (LCreated){
-                            home.deleteLan();
-                            LCreated = false;
+                            LCreated = home.deleteLan();
                         }
                         if (!CCreated){
                             CCreated = home.CreateCaixa();
                             home.h.t.setText("Caixa");
-                            
                         }
                     } else if(b.getName().equals("Lan")){
-                        
+                    
                         if (CCreated){
-                            home.deleteCaixa();
-                            CCreated = false;
+                            CCreated = home.deleteCaixa();
                         }
                         if (!LCreated){
                             LCreated = home.CreateLan();
                             home.h.t.setText("Lan House");
-                            
                         }
-                        
-
-                    } else if(b.getName().equals("Ponto")){
-                        
-                    }
                     
+
+                    } else if(getName().equals("Ponto")){
+                    }   
                 }
             });
-            b.addMouseListener(new java.awt.event.MouseAdapter(){
-                public void mouseEntered(java.awt.event.MouseEvent evt) { 
-                    b.paintHover();
-                }
             
-                public void mouseExited(java.awt.event.MouseEvent evt) {
-                    b.deleteHover();
+            b.addChangeListener(new ChangeListener() {
+                @Override
+                public void stateChanged(ChangeEvent evt) {
+                    System.out.print("CCreated = " + CCreated + "\n");
+                    System.out.print("LCreated = " + LCreated + "\n");
+                    
+                    if (b.getModel().isPressed()) {
+                        b.paintHover();
+                    } else if (b.getModel().isRollover()) {
+                        b.paintHover();
+                    } else if (!CCreated && b.getName().equals("Caixa") || !LCreated && b.getName().equals("Lan") || b.getName().equals("Ponto")){
+                        b.deleteHover();
+                    } else if (CCreated && b.getName().equals("Caixa") || LCreated && b.getName().equals("Lan")){
+                        b.paintHover();
+                    }
                 }
             });
         }

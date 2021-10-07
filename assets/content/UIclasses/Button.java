@@ -16,11 +16,14 @@ public class Button extends JButton{
         setBackground(new Color(22, 33, 53));
         setForeground(Color.WHITE);
         setFont(new Font("arial", Font.BOLD, 25));
-    }   
+
+    }
+
     public void paintHover(){
         setBackground(new Color(39, 55, 78));
         setBorder(BorderFactory.createMatteBorder(0, 2, 0, 0, new Color(216, 223, 242)));
     }
+
     public void deleteHover(){
         setBackground(new Color(22, 33, 53));
         setBorder(null);

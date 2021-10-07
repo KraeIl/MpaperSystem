@@ -16,7 +16,7 @@ public class Homepage extends JPanel implements ActionListener{
 
     public Homepage(){
 
-        setSize(1360, 768);
+        setSize(800, 600);
         setLayout(null);
         setVisible(true);
 
@@ -47,6 +47,7 @@ public class Homepage extends JPanel implements ActionListener{
     }
 
     public boolean CreateCaixa(){
+        System.out.print("Estou executando createCaixa \n");
         boolean CaixaCreated = true;
         c = new Caixa();
         c.height = getHeight();
@@ -55,11 +56,15 @@ public class Homepage extends JPanel implements ActionListener{
         add(c);
         return CaixaCreated;
     }
-    public void deleteCaixa(){
+    public boolean deleteCaixa(){
+        System.out.print("Estou executando deleteCaixa \n");
+        boolean CaixaCreated = false;
         remove(c);
+        return CaixaCreated;
     }
 
     public boolean CreateLan(){
+        System.out.print("Estou executando createLan \n");
         boolean LanCreated = true;
         l = new LanHouse();
         l.height = getHeight();
@@ -68,7 +73,10 @@ public class Homepage extends JPanel implements ActionListener{
         add(l);
         return LanCreated;
     }
-    public void deleteLan(){
+    public boolean deleteLan(){
+        System.out.print("Estou executando deleteLan \n");
+        boolean LanCreated = false;
         remove(l);
+        return LanCreated;
     }
 }

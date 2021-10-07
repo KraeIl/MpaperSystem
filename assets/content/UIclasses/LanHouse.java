@@ -32,7 +32,7 @@ public class LanHouse extends JPanel{
         t.setForeground(Color.BLACK);
         t.setFont(new Font("arial", Font.BOLD, 50));
         t.setBorder(null);
-        t.setBounds(200, 400, 800, 80);
+        t.setBounds(100, 400, 800, 80);
         add(t);
         
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
