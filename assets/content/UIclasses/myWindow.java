@@ -14,6 +14,9 @@ public class myWindow extends JFrame{
         setResizable(false);
         setFocusable(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setFocusable(true);
+        requestFocusInWindow();
+        setName("Mpaper");
 
         //DragListener
         FrameDragListener frameDragListener = new FrameDragListener(this);
@@ -21,7 +24,7 @@ public class myWindow extends JFrame{
         this.addMouseMotionListener(frameDragListener);
 
         //HomePage
-        Homepage homePage = new Homepage();
+        Homepage homePage = new Homepage(this);
         add(homePage);
     }
 }

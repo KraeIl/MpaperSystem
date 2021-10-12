@@ -79,20 +79,17 @@ public class Menu extends JPanel{
             b.addChangeListener(new ChangeListener() {
                 @Override
                 public void stateChanged(ChangeEvent evt) {
-                    System.out.print("CCreated = " + CCreated + "\n");
-                    System.out.print("LCreated = " + LCreated + "\n");
                     
                     if (b.getModel().isPressed()) {
                         b.paintHover();
                     } else if (b.getModel().isRollover()) {
                         b.paintHover();
-                    } else if (!CCreated && b.getName().equals("Caixa") || !LCreated && b.getName().equals("Lan") || b.getName().equals("Ponto")){
+                    } else {
                         b.deleteHover();
-                    } else if (CCreated && b.getName().equals("Caixa") || LCreated && b.getName().equals("Lan")){
-                        b.paintHover();
                     }
                 }
             });
-        }
-    }
+        }   
+    }    
 }
+

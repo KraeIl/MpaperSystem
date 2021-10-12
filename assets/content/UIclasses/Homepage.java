@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+
 public class Homepage extends JPanel implements ActionListener{
     
     public Color color;
@@ -14,11 +15,13 @@ public class Homepage extends JPanel implements ActionListener{
     public Header h;
     public Menu m; 
 
-    public Homepage(){
+    public Homepage(JFrame window){
 
         setSize(800, 600);
         setLayout(null);
         setVisible(true);
+        //setFocusable(true);
+        //requestFocusInWindow();
 
         //Menu
         m = new Menu(this);
@@ -26,28 +29,23 @@ public class Homepage extends JPanel implements ActionListener{
         m.setBounds(m.x, m.y, m.width, m.height);
         add(m);
 
-        // //Mpaper Label
-        // JLabel t = new JLabel("Mister Paper");
-        // t.setForeground(Color.BLACK);
-        // t.setFont(new Font("arial", Font.BOLD, 20));
-        // t.setBorder(null);
-        // t.setBounds(400, 5, 170, 20);
-        // add(t);
-
         //Header
-        h = new Header();
+        h = new Header("Página Inicial", (getWidth() - 200), window);
         h.width = getWidth();
         h.setBounds(h.x, h.y, h.width, h.height);
+
         add(h);
+        System.out.println("Homepage Width: " + getWidth() + "\n");
 
         tm.start();
+
     }
     public void actionPerformed(ActionEvent e) {
         repaint();
     }
 
     public boolean CreateCaixa(){
-        System.out.print("Estou executando createCaixa \n");
+        
         boolean CaixaCreated = true;
         c = new Caixa();
         c.height = getHeight();
@@ -57,14 +55,14 @@ public class Homepage extends JPanel implements ActionListener{
         return CaixaCreated;
     }
     public boolean deleteCaixa(){
-        System.out.print("Estou executando deleteCaixa \n");
+        
         boolean CaixaCreated = false;
         remove(c);
         return CaixaCreated;
     }
 
     public boolean CreateLan(){
-        System.out.print("Estou executando createLan \n");
+        
         boolean LanCreated = true;
         l = new LanHouse();
         l.height = getHeight();
@@ -74,7 +72,7 @@ public class Homepage extends JPanel implements ActionListener{
         return LanCreated;
     }
     public boolean deleteLan(){
-        System.out.print("Estou executando deleteLan \n");
+        
         boolean LanCreated = false;
         remove(l);
         return LanCreated;
