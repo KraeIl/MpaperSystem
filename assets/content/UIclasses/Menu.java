@@ -34,7 +34,6 @@ public class Menu extends JPanel{
             };
 
             Button b = new Button(bName);
-            b.setName(bName);
 
             //ButtonAtributes
             b.x = 0;
@@ -56,23 +55,28 @@ public class Menu extends JPanel{
                         if (LCreated){
                             LCreated = home.deleteLan();
                         }
+
                         if (!CCreated){
                             CCreated = home.CreateCaixa();
                             home.h.t.setText("Caixa");
                         }
+
                     } else if(b.getName().equals("Lan")){
                     
                         if (CCreated){
                             CCreated = home.deleteCaixa();
                         }
+
                         if (!LCreated){
                             LCreated = home.CreateLan();
                             home.h.t.setText("Lan House");
                         }
-                    
 
                     } else if(getName().equals("Ponto")){
-                    }   
+                        
+                    } else {
+
+                    }
                 }
             });
             

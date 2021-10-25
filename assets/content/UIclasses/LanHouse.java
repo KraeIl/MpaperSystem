@@ -29,7 +29,7 @@ public class LanHouse extends JPanel{
     public void addClock(){
         
         JLabel t = new JLabel();
-        t.setForeground(Color.BLACK);
+        t.setForeground(new Color(22, 33, 53));
         t.setFont(new Font("arial", Font.BOLD, 50));
         t.setBorder(null);
         t.setBounds(100, 400, 800, 80);

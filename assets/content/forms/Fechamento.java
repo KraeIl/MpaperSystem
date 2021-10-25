@@ -21,6 +21,7 @@ public class Fechamento extends JFrame{
             this.addMouseListener(frameDragListener);
             this.addMouseMotionListener(frameDragListener);
         
+            //Content Jpanel
             JPanel content = new JPanel();
             content.setSize(getWidth(), getHeight());
             content.setLayout(null);

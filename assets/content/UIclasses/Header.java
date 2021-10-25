@@ -52,8 +52,6 @@ public class Header extends JPanel{
             b1.width = 50;
             b1.height = 50;
             b1.setBounds(b1.x, b1.y, b1.width, b1.height);
-            System.out.print("Width: " + getWidth() + "\n");
-            System.out.print("B.x: " + b1.x + "\n");
 
             //Adding Button
             buttons.add(b1);
@@ -75,8 +73,6 @@ public class Header extends JPanel{
             b2.width = 50;
             b2.height = 50;
             b2.setBounds(b2.x, b2.y, b2.width, b2.height);
-            System.out.print("Width: " + getWidth() + "\n");
-            System.out.print("B.x: " + b2.x + "\n");
 
             //Adding Button
             buttons.add(b2);

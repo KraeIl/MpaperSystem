@@ -72,7 +72,7 @@ public class Caixa extends JPanel{
     public void addClock(){
         
         JLabel tC = new JLabel();
-        tC.setForeground(Color.BLACK);
+        tC.setForeground(new Color(22, 33, 53));
         tC.setFont(new Font("arial", Font.BOLD, 40));
         tC.setBorder(null);
         tC.setBounds(50, 300, 600, 80);
@@ -93,7 +93,7 @@ public class Caixa extends JPanel{
         
         JLabel t = new JLabel();
         t.setText("Mister Paper");
-        t.setForeground(Color.BLACK);
+        t.setForeground(new Color(22, 33, 53));
         t.setFont(new Font("arial", Font.BOLD, 40));
         t.setBounds(50, 100, 600, 80);
         add(t);

@@ -33,13 +33,12 @@ public class Homepage extends JPanel implements ActionListener{
         h = new Header("Página Inicial", (getWidth() - 200), window);
         h.width = getWidth();
         h.setBounds(h.x, h.y, h.width, h.height);
-
         add(h);
-        System.out.println("Homepage Width: " + getWidth() + "\n");
 
         tm.start();
 
     }
+    
     public void actionPerformed(ActionEvent e) {
         repaint();
     }
@@ -67,7 +66,7 @@ public class Homepage extends JPanel implements ActionListener{
         l = new LanHouse();
         l.height = getHeight();
         l.width = getWidth();
-        l.setBounds(c.x, c.y, c.width, c.height);
+        l.setBounds(l.x, l.y, l.width, l.height);
         add(l);
         return LanCreated;
     }

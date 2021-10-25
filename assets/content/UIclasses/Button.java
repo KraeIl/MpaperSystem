@@ -11,6 +11,7 @@ public class Button extends JButton{
 
     public Button(String bName){
         super(bName);
+        setName(bName);
         setBorder(null);
         setFocusPainted(false);
         setBackground(new Color(22, 33, 53));
